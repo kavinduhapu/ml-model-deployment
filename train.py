@@ -24,7 +24,7 @@ model.fit(X_train, y_train)
 
 
 # Save the trained model as a pickle file
-with open('xgboost_model.pkl', 'wb') as file:
+with open('models/xgboost_model.pkl', 'wb') as file:
     pickle.dump(model, file)
 
 
