@@ -1,4 +1,5 @@
 pipeline {
+    agent any
     environment {
         MODEL_PATH = 'models/xgboost_model.pkl'
     }
