@@ -1,9 +1,4 @@
 pipeline {
-    agent {
-        docker {
-            image 'python:3.8-slim'
-        }
-    }
     environment {
         MODEL_PATH = 'models/xgboost_model.pkl'
     }
@@ -15,7 +10,7 @@ pipeline {
         }
         stage('Train Model') {
             steps {
-                sh 'python train.py'
+                sh 'python3 train.py'
             }
         }
 
