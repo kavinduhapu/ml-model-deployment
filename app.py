@@ -9,7 +9,7 @@ import time
 from prometheus_flask_exporter import PrometheusMetrics
 
 # Load your trained XGBoost model
-with open('xgboost_model.pkl', 'rb') as file:
+with open('models/xgboost_model.pkl', 'rb') as file:
     model = pickle.load(file)
 
 
