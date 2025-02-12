@@ -7,11 +7,7 @@ pipeline {
         MODEL_PATH = 'models/xgboost_model.pkl'
     }
     stages {
-        stage('Install Dependencies') {
-            steps {
-                sh 'pip install --user -r requirements.txt'
-            }
-        }
+        
         stage('Train Model') {
             steps {
                 sh 'python3 train.py'
