@@ -1,3 +1,4 @@
+import os
 import pickle
 import xgboost as xgb
 from sklearn.datasets import load_iris
@@ -22,6 +23,8 @@ model = xgb.XGBClassifier(objective='multi:softmax', num_class=3)
 # Train the model
 model.fit(X_train, y_train)
 
+# Ensure the directory exists
+os.makedirs("models", exist_ok=True)
 
 # Save the trained model as a pickle file
 with open('models/xgboost_model.pkl', 'wb') as file:
