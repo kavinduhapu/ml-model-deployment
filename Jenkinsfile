@@ -1,18 +1,18 @@
 pipeline {
 
     agent {
-       dockerfile true
+      any
     }
     environment {
         MODEL_PATH = 'models/xgboost_model.pkl'
     }
     stages {
         
-        stage('Train Model') {
-            steps {
-                sh 'python3 train.py'
-            }
-        }
+        // stage('Train Model') {
+        //     steps {
+        //         sh 'python3 train.py'
+        //     }
+        // }
 
         stage('Build Docker Image') {
             steps {
