@@ -1,9 +1,7 @@
 pipeline {
 
     agent {
-        docker {
-            image 'python:3.9.18-slim-bullseye'
-        }
+       dockerfile true
     }
     environment {
         MODEL_PATH = 'models/xgboost_model.pkl'
