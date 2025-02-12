@@ -1,7 +1,9 @@
 pipeline {
+    agent { label 'X' }
+
     agent {
         docker {
-            image 'python:3.8-slim'
+            image 'python:3.9.18-slim-bullseye'
         }
     }
     environment {
