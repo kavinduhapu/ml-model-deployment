@@ -27,7 +27,7 @@ pipeline {
         //     steps {
         //         sh 'docker run -d -p 5000:5000 --name ml-model-container ml-model:latest'
         //     }
-        // }
+        }
     }
     post {
         success {
