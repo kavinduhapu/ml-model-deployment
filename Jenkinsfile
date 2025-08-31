@@ -22,7 +22,7 @@ pipeline {
             steps {
                 sh 'docker build -t ml-model:latest .'
             }
-        }
+        // }
         // stage('Run Docker Container') {
         //     steps {
         //         sh 'docker run -d -p 5000:5000 --name ml-model-container ml-model:latest'
